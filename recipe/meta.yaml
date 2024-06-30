@@ -1,4 +1,4 @@
-{% set version = '0.4.0' %}
+{% set version = "0.6.0" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,10 +10,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/erify_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/erify/erify_{{ version }}.tar.gz
-  sha256: 7a2e7203f1d6ba174215746ccbb9d40a5110153274e54a96235124e532239804
+  sha256: 1748051cb4be4da09fdebfa2a019f3b15fad511190171c74ccf781f1340dfb61
 
 build:
-  merge_build_host: True  # [win]
+  merge_build_host: true  # [win]
   number: 0
   noarch: generic
   rpaths:
@@ -40,10 +40,8 @@ about:
   home: https://flujoo.github.io/erify/
   dev_url: https://github.com/flujoo/erify
   license: MIT
-  summary: Provides several validator functions for checking if arguments passed by users have
-    valid types, lengths, etc. and for generating informative and well-formatted error
-    messages in a consistent style. Also provides tools for users to create their own
-    validator functions. The error message style used is adopted from <https://style.tidyverse.org/error-messages.html>.
+  summary: Provides several validator functions for checking if arguments passed by users have valid types, lengths, etc. and for generating informative and well-formatted error messages in a consistent style. Also provides tools for users to create their own validator functions. The error message style used is adopted from
+    <https://style.tidyverse.org/error-messages.html>.
   license_family: MIT
   license_file:
     - '{{ environ["PREFIX"] }}/lib/R/share/licenses/MIT'
